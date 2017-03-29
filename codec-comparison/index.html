@@ -133,9 +133,7 @@
                  <h1>AV1, VP9, x265, x264 Video Codec Comparison</h1>
                  <p>Source are frames 13500 to 13900 from <a href="http://media.xiph.org/tearsofsteel/">1080 PNG Tears of Steel</a>, (CC) Blender Foundation | mango.blender.org - Creative Commons Attribution 3.0 license.</p>
                  <p>source images are encoded in raw YUV420p .
-                     <pre>
-                         ffmpeg -f image2 -pattern_type glob -r 24 -i '13*.png' -vf format=yuv420p out.y4m
-                     </pre></p>
+                     <pre>ffmpeg -f image2 -pattern_type glob -r 24 -i '13*.png' -vf format=yuv420p out.y4m</pre></p>
                  <p>macOS 10.12.4, 1.8 GHz Core i5 (I5-3427U), 8GiB 1600 MHz DDR3</p>
                  <p></p>
                  <div class="container">
