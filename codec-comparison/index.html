@@ -23,11 +23,24 @@
             h2 {
                 margin: 2em 0;
             }
+            h3 {
+                margin: 0 0 .5em;
+            }
             a, a:visited, a:hover, a:active {
                 color: #bbb;
             }
             input[type="radio"]{
             	display:none;
+            }
+            .container {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+            .container .box {
+                margin: 1em;
+                padding: 1em;
+                background-color: #555;
             }
             label {
                 display: inline-block;
@@ -119,6 +132,47 @@
              <header>
                  <h1>AV1, VP9, x265, x264 Video Codec Comparison</h1>
                  <p>Source are frames 13500 to 13900 from <a href="http://media.xiph.org/tearsofsteel/">1080 PNG Tears of Steel</a>, (CC) Blender Foundation | mango.blender.org - Creative Commons Attribution 3.0 license.</p>
+                 <p>source images are encoded in raw YUV420p .
+                     <pre>
+                         ffmpeg -f image2 -pattern_type glob -r 24 -i '13*.png' -vf format=yuv420p out.y4m
+                     </pre></p>
+                 <p>macOS 10.12.4, 1.8 GHz Core i5 (I5-3427U), 8GiB 1600 MHz DDR3</p>
+                 <p></p>
+                 <div class="container">
+                     <div class="box">
+                         <h3>AV1</h3>
+                         <p><a href="https://aomedia.googlesource.com/aom/+/master/av1/">Aomedia AV1</a> <br>
+                             version : 2016-04-07 v0.1.0 "AOMedia Codec 1"
+                             <pre>./aomenc --fps=24/1 --end-usage=cq --target-bitrate=512 -o aom.webm source.y4m</pre>
+                             Resutling file is 1170104B (561.65 kb/s) - speed 0.02 fps
+                         </p>
+                     </div>
+                     <div class="box">
+                         <h3>VP9</h3>
+                         <p><a href="https://chromium.googlesource.com/webm/libvpx">Libvpx</a> <br>
+                             version : VP9 Encoder v1.6.1-389-gd856157
+                             <pre>./vpxenc --fps=24/1 --target-bitrate=575 -o vp9.webm source.y4m</pre>
+                             Resutling file is 1169059B (561.15 kb/s) - speed 0.49 fps
+                         </p>
+                     </div>
+                     <div class="box">
+                         <h3>x265</h3>
+                         <p><a href="http://hg.videolan.org/x265">x265</a> <br>
+                             version 2.3+23-gd15361c
+                             <pre>./x265 --fps 24/1 -p veryslow --bitrate 545 --pass 2 source.y4m -o x265.x265</pre>
+                             Resutling file is 1173632B (561.71 kb/s) - speed 0.62 fps
+                         </p>
+                     </div>
+                     <div class="box">
+                         <h3>x264</h3>
+                         <p><a href="http://git.videolan.org/?p=x264.git;a=summary">x264</a> <br>
+                             version : x264 core:148 r2762 90a61ec
+                             <pre>./x265 --fps 24/1 -p veryslow --bitrate 545 --pass 2 source.y4m -o x265.x265</pre>
+                             Resutling file is 1173632B (561.71 kb/s) - speed 3.65 fps
+                         </p>
+                     </div>
+                 </div>
+
              </header>
              <main>
                  
