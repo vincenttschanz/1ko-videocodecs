@@ -5,7 +5,7 @@
             <title>Codec Comparison</title>
             
             <!-- meta -->
-            <meta name="description" content="Visual comparison between Aomedia AV1, WebM VP9, x265 and x264 encoders - 2017-03-29">
+            <meta name="description" content="Visual comparison between Aomedia AV1, WebM VP9, x265 and x264 encoders - 2017-04-07">
             <meta name="author" content="Vincent Tschanz">
  
             <!-- icon -->
@@ -142,39 +142,39 @@
                  <p>Source are frames 13500 to 13900 from <a href="http://media.xiph.org/tearsofsteel/">1080 PNG Tears of Steel</a>, (CC) Blender Foundation | mango.blender.org - Creative Commons Attribution 3.0 license.</p>
                  <p>Source images are encoded in raw YUV420p .
                      <pre>ffmpeg -f image2 -pattern_type glob -r 24 -i '13*.png' -vf format=yuv420p source.y4m</pre></p>
-                 <p>macOS 10.12.4, 1.8 GHz Core i5 (I5-3427U), 8GiB 1600 MHz DDR3 - 2017-03-29</p>
+                 <p>macOS 10.12.4, 1.8 GHz Core i5 (I5-3427U), 8GiB 1600 MHz DDR3 - 2017-04-07</p>
                  <p></p>
                  <div class="container">
                      <div class="box">
                          <h3>AV1</h3>
                          <p><a href="https://aomedia.googlesource.com/aom/+/master/av1/">Aomedia AV1</a> <br>
-                             version : 2016-04-07 v0.1.0 "AOMedia Codec 1"
-                             <pre>./aomenc --fps=24/1 --end-usage=cq --target-bitrate=512 -o aom.webm source.y4m</pre>
-                             Resutling file is 1170104B (561.65 kb/s) - speed 0.02 fps
+                             version : 2016-04-07 v0.1.0 "AOMedia Codec 1" git 2017-04-07
+                             <pre>./aomenc --fps=24/1 --threads=4 --end-usage=cq --target-bitrate=1000 -o aom.webm source.y4m</pre>
+                             Resutling file is 2241079B (1075.72 kb/s) - speed 0.02 fps
                          </p>
                      </div>
                      <div class="box">
                          <h3>VP9</h3>
                          <p><a href="https://chromium.googlesource.com/webm/libvpx">Libvpx</a> <br>
-                             version : VP9 Encoder v1.6.1-389-gd856157
-                             <pre>./vpxenc --fps=24/1 --target-bitrate=575 -o vp9.webm source.y4m</pre>
-                             Resutling file is 1169059B (561.15 kb/s) - speed 0.49 fps
+                             version : VP9 Encoder v1.6.1-437-g04e945656
+                             <pre>./vpxenc --fps=24/1 --target-bitrate=1152 --row-mt=1 -o vp9.webm source.y4m</pre>
+                             Resutling file is 2239987B (1075.19 kb/s) - speed 0.37 fps
                          </p>
                      </div>
                      <div class="box">
                          <h3>x265</h3>
                          <p><a href="http://hg.videolan.org/x265">x265</a> <br>
-                             version 2.3+23-gd15361c
-                             <pre>./x265 --fps 24/1 -p veryslow --bitrate 545 --pass 2 source.y4m -o x265.x265</pre>
-                             Resutling file is 1173632B (561.71 kb/s) - speed 0.62 fps
+                             version 2.3+27-g4b16aecbb
+                             <pre>./x265 --fps 24/1 --profile high --preset veryslow --bitrate 1075 --pass 2 source.y4m -o x265.x265</pre>
+                             Resutling file is 2243474B (1075.24 kb/s) - speed 0.48 fps
                          </p>
                      </div>
                      <div class="box">
                          <h3>x264</h3>
                          <p><a href="http://git.videolan.org/?p=x264.git;a=summary">x264</a> <br>
                              version : x264 core:148 r2762 90a61ec
-                             <pre>./x264 --fps 24/1 --preset veryslow --bitrate 523 --pass 2 source.y4m -o x264.x264</pre>
-                             Resutling file is 1170678B (561.93 kb/s) - speed 3.65 fps
+                             <pre>./x265 --fps 24/1 --profile high --preset veryslow --bitrate 1028 --pass 2 source.y4m -o x264.x264</pre>
+                             Resutling file is 2240367B (1075.38 kb/s) - speed 2.78 fps
                          </p>
                      </div>
                  </div>
@@ -193,10 +193,10 @@
                          <input type="radio" name="frame0" id="toggle-x40" />                     <label for="toggle-x40">x264  </label>
                          
                          <img id="so0"  src="frames/source_0.png" alt="source - frame 0">
-                         <img id="av0"     src="frames/av1_0.png" alt="av1 -    frame 0">
-                         <img id="vp0"     src="frames/vp9_0.png" alt="vp9 -    frame 0">
-                         <img id="x50"    src="frames/x265_0.png" alt="x265 -   frame 0">
-                         <img id="x40"    src="frames/x264_0.png" alt="x264 -   frame 0">
+                         <img id="av0"     src="frames/1m/av1_1m_0.png" alt="av1 -    frame 0">
+                         <img id="vp0"     src="frames/1m/vp9_1m_0.png" alt="vp9 -    frame 0">
+                         <img id="x50"    src="frames/1m/x265_1m_0.png" alt="x265 -   frame 0">
+                         <img id="x40"    src="frames/1m/x264_1m_0.png" alt="x264 -   frame 0">
                      </div>
                      <figcaption>
                          <p></p>
@@ -214,10 +214,10 @@
                          <input type="radio" name="frame200" id="toggle-x4200" />                   <label for="toggle-x4200">x264  </label>
                          
                          <img id="so200"  src="frames/source_200.png" alt="source - frame 200">
-                         <img id="av200"     src="frames/av1_200.png" alt="av1 -    frame 200">
-                         <img id="vp200"     src="frames/vp9_200.png" alt="vp9 -    frame 200">
-                         <img id="x5200"    src="frames/x265_200.png" alt="x265 -   frame 200">
-                         <img id="x4200"    src="frames/x264_200.png" alt="x264 -   frame 200">
+                         <img id="av200"     src="frames/1m/av1_1m_200.png" alt="av1 -    frame 200">
+                         <img id="vp200"     src="frames/1m/vp9_1m_200.png" alt="vp9 -    frame 200">
+                         <img id="x5200"    src="frames/1m/x265_1m_200.png" alt="x265 -   frame 200">
+                         <img id="x4200"    src="frames/1m/x264_1m_200.png" alt="x264 -   frame 200">
                      </div>
                      <figcaption>
                          <p></p>
@@ -235,10 +235,10 @@
                          <input type="radio" name="frame226" id="toggle-x4226" />                   <label for="toggle-x4226">x264  </label>
                          
                          <img id="so226"  src="frames/source_226.png" alt="source - frame 226">
-                         <img id="av226"     src="frames/av1_226.png" alt="av1 -    frame 226">
-                         <img id="vp226"     src="frames/vp9_226.png" alt="vp9 -    frame 226">
-                         <img id="x5226"    src="frames/x265_226.png" alt="x265 -   frame 226">
-                         <img id="x4226"    src="frames/x264_226.png" alt="x264 -   frame 226">
+                         <img id="av226"     src="frames/1m/av1_1m_226.png" alt="av1 -    frame 226">
+                         <img id="vp226"     src="frames/1m/vp9_1m_226.png" alt="vp9 -    frame 226">
+                         <img id="x5226"    src="frames/1m/x265_1m_226.png" alt="x265 -   frame 226">
+                         <img id="x4226"    src="frames/1m/x264_1m_226.png" alt="x264 -   frame 226">
                      </div>
                      <figcaption>
                          <p></p>
@@ -256,10 +256,10 @@
                          <input type="radio" name="frame399" id="toggle-x4399" />                   <label for="toggle-x4399">x264  </label>
                          
                          <img id="so399"  src="frames/source_399.png" alt="source - frame 399">
-                         <img id="av399"     src="frames/av1_399.png" alt="av1 -    frame 399">
-                         <img id="vp399"     src="frames/vp9_399.png" alt="vp9 -    frame 399">
-                         <img id="x5399"    src="frames/x265_399.png" alt="x265 -   frame 399">
-                         <img id="x4399"    src="frames/x264_399.png" alt="x264 -   frame 399">
+                         <img id="av399"     src="frames/1m/av1_1m_399.png" alt="av1 -    frame 399">
+                         <img id="vp399"     src="frames/1m/vp9_1m_399.png" alt="vp9 -    frame 399">
+                         <img id="x5399"    src="frames/1m/x265_1m_399.png" alt="x265 -   frame 399">
+                         <img id="x4399"    src="frames/1m/x264_1m_399.png" alt="x264 -   frame 399">
                      </div>
                      <figcaption>
                          <p></p>
