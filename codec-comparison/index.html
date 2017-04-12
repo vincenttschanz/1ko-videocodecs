@@ -77,6 +77,13 @@
             #toggle-x5226:checked ~ label[for="toggle-x5226"],
             #toggle-x4226:checked ~ label[for="toggle-x4226"],
             
+            #toggle-so260:checked ~ label[for="toggle-so260"],
+            #toggle-av260:checked ~ label[for="toggle-av260"],
+            #toggle-ab260:checked ~ label[for="toggle-ab260"],
+            #toggle-vp260:checked ~ label[for="toggle-vp260"],
+            #toggle-x5260:checked ~ label[for="toggle-x5260"],
+            #toggle-x4260:checked ~ label[for="toggle-x4260"],
+            
             #toggle-so399:checked ~ label[for="toggle-so399"],
             #toggle-av399:checked ~ label[for="toggle-av399"],
             #toggle-ab399:checked ~ label[for="toggle-ab399"],
@@ -123,6 +130,13 @@
             #toggle-x5226:checked ~ #x5226,
             #toggle-x4226:checked ~ #x4226,
             
+            #toggle-so260:checked ~ #so260,
+            #toggle-av260:checked ~ #av260,
+            #toggle-ab260:checked ~ #ab260,
+            #toggle-vp260:checked ~ #vp260,
+            #toggle-x5260:checked ~ #x5260,
+            #toggle-x4260:checked ~ #x4260,
+            
             #toggle-so399:checked ~ #so399,
             #toggle-av399:checked ~ #av399,
             #toggle-ab399:checked ~ #ab399,
@@ -138,7 +152,8 @@
     <body>
          <div class="page">
              <header>
-                 <h1>AV1, VP9, x265, x264 Video Codec Comparison</h1>
+                 <h1>AV1, VP9, x265, x264 Video Codec Comparison - 562kb/s</h1>
+                 <nav>Got to <a href="1000kbps.html">1Mb/s comparison</a></nav>
                  <p>Source are frames 13500 to 13900 from <a href="http://media.xiph.org/tearsofsteel/">1080 PNG Tears of Steel</a>, (CC) Blender Foundation | mango.blender.org - Creative Commons Attribution 3.0 license.</p>
                  <p>Source images are encoded in raw YUV420p .
                      <pre>ffmpeg -f image2 -pattern_type glob -r 24 -i '13*.png' -vf format=yuv420p source.y4m</pre></p>
@@ -239,6 +254,27 @@
                          <img id="vp226"     src="frames/vp9_226.png" alt="vp9 -    frame 226">
                          <img id="x5226"    src="frames/x265_226.png" alt="x265 -   frame 226">
                          <img id="x4226"    src="frames/x264_226.png" alt="x264 -   frame 226">
+                     </div>
+                     <figcaption>
+                         <p></p>
+                     </figcaption>
+                 </figure>
+                 
+                 <h2>Frame 260</h2>
+                 <figure>
+                     <div class="picture">
+                         
+                         <input type="radio" name="frame260" id="toggle-so260" checked="checked" /> <label for="toggle-so260">Source</label>
+                         <input type="radio" name="frame260" id="toggle-av260" />                   <label for="toggle-av260">AV1   </label>
+                         <input type="radio" name="frame260" id="toggle-vp260" />                   <label for="toggle-vp260">VP9   </label>
+                         <input type="radio" name="frame260" id="toggle-x5260" />                   <label for="toggle-x5260">x265  </label>
+                         <input type="radio" name="frame260" id="toggle-x4260" />                   <label for="toggle-x4260">x264  </label>
+                         
+                         <img id="so260"  src="frames/source_260.png" alt="source - frame 260">
+                         <img id="av260"     src="frames/av1_260.png" alt="av1 -    frame 260">
+                         <img id="vp260"     src="frames/vp9_260.png" alt="vp9 -    frame 260">
+                         <img id="x5260"    src="frames/x265_260.png" alt="x265 -   frame 260">
+                         <img id="x4260"    src="frames/x264_260.png" alt="x264 -   frame 260">
                      </div>
                      <figcaption>
                          <p></p>
