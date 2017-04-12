@@ -1,4 +1,3 @@
 # 1ko-videocodecs
-News Video Codecs tests
+Tinkering and tests with new video codecs
 
--_-_
