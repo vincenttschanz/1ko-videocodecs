@@ -3,14 +3,14 @@
     <head>
         <meta charset="utf-8">
             <title>Codec Comparison</title>
-            
+
             <!-- meta -->
             <meta name="description" content="Visual comparison between Aomedia AV1, WebM VP9, x265 and x264 encoders - 2017-03-29">
             <meta name="author" content="Vincent Tschanz">
- 
+
             <!-- icon -->
             <link rel="shortcut icon" href="favicon.ico">
- 
+
             <!-- css -->
             <style>
             html {
@@ -55,35 +55,35 @@
             figure {
                 margin: 2em 0;
             }
-            
+
             #toggle-so0:checked ~ label[for="toggle-so0"],
             #toggle-av0:checked ~ label[for="toggle-av0"],
             #toggle-ab0:checked ~ label[for="toggle-ab0"],
             #toggle-vp0:checked ~ label[for="toggle-vp0"],
             #toggle-x50:checked ~ label[for="toggle-x50"],
             #toggle-x40:checked ~ label[for="toggle-x40"],
-            
+
             #toggle-so200:checked ~ label[for="toggle-so200"],
             #toggle-av200:checked ~ label[for="toggle-av200"],
             #toggle-ab200:checked ~ label[for="toggle-ab200"],
             #toggle-vp200:checked ~ label[for="toggle-vp200"],
             #toggle-x5200:checked ~ label[for="toggle-x5200"],
             #toggle-x4200:checked ~ label[for="toggle-x4200"],
-            
+
             #toggle-so226:checked ~ label[for="toggle-so226"],
             #toggle-av226:checked ~ label[for="toggle-av226"],
             #toggle-ab226:checked ~ label[for="toggle-ab226"],
             #toggle-vp226:checked ~ label[for="toggle-vp226"],
             #toggle-x5226:checked ~ label[for="toggle-x5226"],
             #toggle-x4226:checked ~ label[for="toggle-x4226"],
-            
+
             #toggle-so260:checked ~ label[for="toggle-so260"],
             #toggle-av260:checked ~ label[for="toggle-av260"],
             #toggle-ab260:checked ~ label[for="toggle-ab260"],
             #toggle-vp260:checked ~ label[for="toggle-vp260"],
             #toggle-x5260:checked ~ label[for="toggle-x5260"],
             #toggle-x4260:checked ~ label[for="toggle-x4260"],
-            
+
             #toggle-so399:checked ~ label[for="toggle-so399"],
             #toggle-av399:checked ~ label[for="toggle-av399"],
             #toggle-ab399:checked ~ label[for="toggle-ab399"],
@@ -94,7 +94,7 @@
                 color: #d33;
                 background-color: #555;
             }
-            
+
             .picture {
                 position: relative;
                 width: 1920px;
@@ -108,35 +108,35 @@
                 left: 0;
                 z-index: 0;
             }
-            
+
             #toggle-so0:checked ~ #so0,
             #toggle-av0:checked ~ #av0,
             #toggle-ab0:checked ~ #ab0,
             #toggle-vp0:checked ~ #vp0,
             #toggle-x50:checked ~ #x50,
             #toggle-x40:checked ~ #x40,
-            
+
             #toggle-so200:checked ~ #so200,
             #toggle-av200:checked ~ #av200,
             #toggle-ab200:checked ~ #ab200,
             #toggle-vp200:checked ~ #vp200,
             #toggle-x5200:checked ~ #x5200,
             #toggle-x4200:checked ~ #x4200,
-            
+
             #toggle-so226:checked ~ #so226,
             #toggle-av226:checked ~ #av226,
             #toggle-ab226:checked ~ #ab226,
             #toggle-vp226:checked ~ #vp226,
             #toggle-x5226:checked ~ #x5226,
             #toggle-x4226:checked ~ #x4226,
-            
+
             #toggle-so260:checked ~ #so260,
             #toggle-av260:checked ~ #av260,
             #toggle-ab260:checked ~ #ab260,
             #toggle-vp260:checked ~ #vp260,
             #toggle-x5260:checked ~ #x5260,
             #toggle-x4260:checked ~ #x4260,
-            
+
             #toggle-so399:checked ~ #so399,
             #toggle-av399:checked ~ #av399,
             #toggle-ab399:checked ~ #ab399,
@@ -147,7 +147,7 @@
                 z-index: 1;
             }
             </style>
- 
+
     </head>
     <body>
          <div class="page">
@@ -200,112 +200,122 @@
 
              </header>
              <main>
-                 
+
                  <h2>Frame 0</h2>
                  <figure>
                      <div class="picture">
-                         
-                         <input type="radio" name="frame0" id="toggle-so0" checked="checked" />   <label for="toggle-so0">Source</label>
-                         <input type="radio" name="frame0" id="toggle-av0" />                     <label for="toggle-av0">AV1   </label>
-                         <input type="radio" name="frame0" id="toggle-vp0" />                     <label for="toggle-vp0">VP9   </label>
-                         <input type="radio" name="frame0" id="toggle-x50" />                     <label for="toggle-x50">x265  </label>
-                         <input type="radio" name="frame0" id="toggle-x40" />                     <label for="toggle-x40">x264  </label>
-                         
-                         <img id="so0"  src="frames/source_0.png" alt="source - frame 0">
-                         <img id="av0"     src="frames/av1_0.png" alt="av1 -    frame 0">
-                         <img id="vp0"     src="frames/vp9_0.png" alt="vp9 -    frame 0">
-                         <img id="x50"    src="frames/x265_0.png" alt="x265 -   frame 0">
-                         <img id="x40"    src="frames/x264_0.png" alt="x264 -   frame 0">
+
+                         <input type="radio" name="frame0" id="toggle-so0" checked="checked" />   <label for="toggle-so0">Source     </label>
+                         <input type="radio" name="frame0" id="toggle-av0" />                     <label for="toggle-av0">AV1 2017-03</label>
+                         <input type="radio" name="frame0" id="toggle-ab0" />                     <label for="toggle-ab0">AV1 2018-02</label>
+                         <input type="radio" name="frame0" id="toggle-vp0" />                     <label for="toggle-vp0">VP9        </label>
+                         <input type="radio" name="frame0" id="toggle-x50" />                     <label for="toggle-x50">x265       </label>
+                         <input type="radio" name="frame0" id="toggle-x40" />                     <label for="toggle-x40">x264       </label>
+
+                         <img id="so0"  src="frames/source_0.png"                alt="source - frame 0">
+                         <img id="av0"  src="frames/av1_0.png"                   alt="av1 2017-03 - frame 0">
+                         <img id="ab0"  src="frames/av1_2018-02_512kbps_000.png" alt="av1 2018-02 - frame 0">
+                         <img id="vp0"  src="frames/vp9_0.png"                   alt="vp9 - frame 0">
+                         <img id="x50"  src="frames/x265_0.png"                  alt="x265 - frame 0">
+                         <img id="x40"  src="frames/x264_0.png"                  alt="x264 - frame 0">
                      </div>
                      <figcaption>
                          <p></p>
                      </figcaption>
                  </figure>
-                 
+
                  <h2>Frame 200</h2>
                  <figure>
                      <div class="picture">
-                         
-                         <input type="radio" name="frame200" id="toggle-so200" checked="checked" /> <label for="toggle-so200">Source</label> 
-                         <input type="radio" name="frame200" id="toggle-av200" />                   <label for="toggle-av200">AV1   </label>
+
+                         <input type="radio" name="frame200" id="toggle-so200" checked="checked" /> <label for="toggle-so200">Source</label>
+                         <input type="radio" name="frame200" id="toggle-av200" />                   <label for="toggle-av200">AV1 2017-03</label>
+                         <input type="radio" name="frame200" id="toggle-ab200" />                   <label for="toggle-ab200">AV1 2018-02</label>
                          <input type="radio" name="frame200" id="toggle-vp200" />                   <label for="toggle-vp200">VP9   </label>
                          <input type="radio" name="frame200" id="toggle-x5200" />                   <label for="toggle-x5200">x265  </label>
                          <input type="radio" name="frame200" id="toggle-x4200" />                   <label for="toggle-x4200">x264  </label>
-                         
-                         <img id="so200"  src="frames/source_200.png" alt="source - frame 200">
-                         <img id="av200"     src="frames/av1_200.png" alt="av1 -    frame 200">
-                         <img id="vp200"     src="frames/vp9_200.png" alt="vp9 -    frame 200">
-                         <img id="x5200"    src="frames/x265_200.png" alt="x265 -   frame 200">
-                         <img id="x4200"    src="frames/x264_200.png" alt="x264 -   frame 200">
+
+                         <img id="so200"  src="frames/source_200.png"              alt="source - frame 200">
+                         <img id="av200"  src="frames/av1_200.png"                 alt="av1 2017-03 - frame 200">
+                         <img id="ab200"  src="frames/av1_2018-02_512kbps_200.png" alt="av1 2018-02 - frame 200">
+                         <img id="vp200"  src="frames/vp9_200.png"                 alt="vp9 -    frame 200">
+                         <img id="x5200"  src="frames/x265_200.png"                alt="x265 -   frame 200">
+                         <img id="x4200"  src="frames/x264_200.png"                alt="x264 -   frame 200">
                      </div>
                      <figcaption>
                          <p></p>
                      </figcaption>
                  </figure>
-                 
+
                  <h2>Frame 226</h2>
                  <figure>
                      <div class="picture">
-                         
+
                          <input type="radio" name="frame226" id="toggle-so226" checked="checked" /> <label for="toggle-so226">Source</label>
-                         <input type="radio" name="frame226" id="toggle-av226" />                   <label for="toggle-av226">AV1   </label>
+                         <input type="radio" name="frame226" id="toggle-av226" />                   <label for="toggle-av226">AV1 2017-03</label>
+                         <input type="radio" name="frame226" id="toggle-ab226" />                   <label for="toggle-ab226">AV1 2018-02</label>
                          <input type="radio" name="frame226" id="toggle-vp226" />                   <label for="toggle-vp226">VP9   </label>
                          <input type="radio" name="frame226" id="toggle-x5226" />                   <label for="toggle-x5226">x265  </label>
                          <input type="radio" name="frame226" id="toggle-x4226" />                   <label for="toggle-x4226">x264  </label>
-                         
-                         <img id="so226"  src="frames/source_226.png" alt="source - frame 226">
-                         <img id="av226"     src="frames/av1_226.png" alt="av1 -    frame 226">
-                         <img id="vp226"     src="frames/vp9_226.png" alt="vp9 -    frame 226">
-                         <img id="x5226"    src="frames/x265_226.png" alt="x265 -   frame 226">
-                         <img id="x4226"    src="frames/x264_226.png" alt="x264 -   frame 226">
+
+                         <img id="so226"  src="frames/source_226.png"              alt="source - frame 226">
+                         <img id="av226"  src="frames/av1_226.png"                 alt="av1 2017-03 - frame 226">
+                         <img id="ab226"  src="frames/av1_2018-02_512kbps_226.png" alt="av1 2018-02 - frame 226">
+                         <img id="vp226"  src="frames/vp9_226.png"                 alt="vp9 - frame 226">
+                         <img id="x5226"  src="frames/x265_226.png"                alt="x265 - frame 226">
+                         <img id="x4226"  src="frames/x264_226.png"                alt="x264 - frame 226">
                      </div>
                      <figcaption>
                          <p></p>
                      </figcaption>
                  </figure>
-                 
+
                  <h2>Frame 260</h2>
                  <figure>
                      <div class="picture">
-                         
+
                          <input type="radio" name="frame260" id="toggle-so260" checked="checked" /> <label for="toggle-so260">Source</label>
-                         <input type="radio" name="frame260" id="toggle-av260" />                   <label for="toggle-av260">AV1   </label>
+                         <input type="radio" name="frame260" id="toggle-av260" />                   <label for="toggle-av260">AV1 2017-03</label>
+                         <input type="radio" name="frame260" id="toggle-ab260" />                   <label for="toggle-ab260">AV1 2018-02</label>
                          <input type="radio" name="frame260" id="toggle-vp260" />                   <label for="toggle-vp260">VP9   </label>
                          <input type="radio" name="frame260" id="toggle-x5260" />                   <label for="toggle-x5260">x265  </label>
                          <input type="radio" name="frame260" id="toggle-x4260" />                   <label for="toggle-x4260">x264  </label>
-                         
-                         <img id="so260"  src="frames/source_260.png" alt="source - frame 260">
-                         <img id="av260"     src="frames/av1_260.png" alt="av1 -    frame 260">
-                         <img id="vp260"     src="frames/vp9_260.png" alt="vp9 -    frame 260">
-                         <img id="x5260"    src="frames/x265_260.png" alt="x265 -   frame 260">
-                         <img id="x4260"    src="frames/x264_260.png" alt="x264 -   frame 260">
+
+                         <img id="so260"  src="frames/source_260.png"              alt="source - frame 260">
+                         <img id="av260"  src="frames/av1_260.png"                 alt="av1 2017-03 - frame 260">
+                         <img id="ab260"  src="frames/av1_2018-02_512kbps_260.png" alt="av1 2018-02 - frame 260">
+                         <img id="vp260"  src="frames/vp9_260.png"                 alt="vp9 -    frame 260">
+                         <img id="x5260"  src="frames/x265_260.png"                alt="x265 -   frame 260">
+                         <img id="x4260"  src="frames/x264_260.png"                alt="x264 -   frame 260">
                      </div>
                      <figcaption>
                          <p></p>
                      </figcaption>
                  </figure>
-                 
+
                  <h2>Frame 399</h2>
                  <figure>
                      <div class="picture">
-                         
+
                          <input type="radio" name="frame399" id="toggle-so399" checked="checked" /> <label for="toggle-so399">Source</label>
-                         <input type="radio" name="frame399" id="toggle-av399" />                   <label for="toggle-av399">AV1   </label>
+                         <input type="radio" name="frame399" id="toggle-av399" />                   <label for="toggle-av399">AV1 2017-03</label>
+                         <input type="radio" name="frame399" id="toggle-ab399" />                   <label for="toggle-ab399">AV1 2018-02</label>
                          <input type="radio" name="frame399" id="toggle-vp399" />                   <label for="toggle-vp399">VP9   </label>
                          <input type="radio" name="frame399" id="toggle-x5399" />                   <label for="toggle-x5399">x265  </label>
                          <input type="radio" name="frame399" id="toggle-x4399" />                   <label for="toggle-x4399">x264  </label>
-                         
-                         <img id="so399"  src="frames/source_399.png" alt="source - frame 399">
-                         <img id="av399"     src="frames/av1_399.png" alt="av1 -    frame 399">
-                         <img id="vp399"     src="frames/vp9_399.png" alt="vp9 -    frame 399">
-                         <img id="x5399"    src="frames/x265_399.png" alt="x265 -   frame 399">
-                         <img id="x4399"    src="frames/x264_399.png" alt="x264 -   frame 399">
+
+                         <img id="so399" src="frames/source_399.png"              alt="source - frame 399">
+                         <img id="av399" src="frames/av1_399.png"                 alt="av1 2017-02 - frame 399">
+                         <img id="ab399" src="frames/av1_2018-02_512kbps_399.png" alt="av1 2018-02 - frame 399">
+                         <img id="vp399" src="frames/vp9_399.png"                 alt="vp9 -    frame 399">
+                         <img id="x5399" src="frames/x265_399.png"                alt="x265 -   frame 399">
+                         <img id="x4399" src="frames/x264_399.png"                alt="x264 -   frame 399">
                      </div>
                      <figcaption>
                          <p></p>
                      </figcaption>
                  </figure>
-                 
+
              </main>
          </div>
     </body>
