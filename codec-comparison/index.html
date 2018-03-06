@@ -29,6 +29,9 @@
             a, a:visited, a:hover, a:active {
                 color: #bbb;
             }
+            pre {
+                white-space: pre-wrap;
+            }
             input[type="radio"]{
             	display:none;
             }
@@ -168,6 +171,13 @@
                              Resutling file is 1170104B (561.65 kb/s) - speed 0.02 fps
                          </p>
                          <p>file : <a href="videos/av1_562.webm">av1_562.webm</a> (won't play in browser)</p>
+                         <h4>AV1 2018-02</h4>
+                         <p>Compiled from source, 2018-02-12<br>
+                             AOMedia Project AV1 Encoder 0.1.0-8036-gbb87c66d0
+                             <pre>./aomenc --fps=24/1 --threads=8 --codec=av1 --end-usage=cq --target-bitrate=512 -t 8 --cpu-used=0 --tile-columns=4 -o aom_512.webm source.y4m</pre>
+                             Resutling file is 1202794B (577.34 kb/s) 
+                         </p>
+                         <p>file : <a href="videos/av1-2018-02_577.webm">av1-2018-02_577.webm</a> (won't play in browser)</p>
                      </div>
                      <div class="box">
                          <h3>VP9</h3>
