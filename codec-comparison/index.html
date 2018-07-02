@@ -68,6 +68,7 @@
             #toggle-ac0:checked ~ label[for="toggle-ac0"],
             #toggle-vp0:checked ~ label[for="toggle-vp0"],
             #toggle-x50:checked ~ label[for="toggle-x50"],
+            #toggle-x5b0:checked ~ label[for="toggle-x5bb0"],
             #toggle-x40:checked ~ label[for="toggle-x40"],
 
             #toggle-so200:checked ~ label[for="toggle-so200"],
@@ -76,6 +77,7 @@
             #toggle-ac200:checked ~ label[for="toggle-ac200"],
             #toggle-vp200:checked ~ label[for="toggle-vp200"],
             #toggle-x5200:checked ~ label[for="toggle-x5200"],
+            #toggle-x5b200:checked ~ label[for="toggle-x5b200"],
             #toggle-x4200:checked ~ label[for="toggle-x4200"],
 
             #toggle-so226:checked ~ label[for="toggle-so226"],
@@ -84,6 +86,7 @@
             #toggle-ac226:checked ~ label[for="toggle-ac226"],
             #toggle-vp226:checked ~ label[for="toggle-vp226"],
             #toggle-x5226:checked ~ label[for="toggle-x5226"],
+            #toggle-x5b226:checked ~ label[for="toggle-x5b226"],
             #toggle-x4226:checked ~ label[for="toggle-x4226"],
 
             #toggle-so260:checked ~ label[for="toggle-so260"],
@@ -92,6 +95,7 @@
             #toggle-ac260:checked ~ label[for="toggle-ac260"],
             #toggle-vp260:checked ~ label[for="toggle-vp260"],
             #toggle-x5260:checked ~ label[for="toggle-x5260"],
+            #toggle-x5b260:checked ~ label[for="toggle-x5b260"],
             #toggle-x4260:checked ~ label[for="toggle-x4260"],
 
             #toggle-so399:checked ~ label[for="toggle-so399"],
@@ -100,6 +104,7 @@
             #toggle-ac399:checked ~ label[for="toggle-ac399"],
             #toggle-vp399:checked ~ label[for="toggle-vp399"],
             #toggle-x5399:checked ~ label[for="toggle-x5399"],
+            #toggle-x5b399:checked ~ label[for="toggle-x5b399"],
             #toggle-x4399:checked ~ label[for="toggle-x4399"]
             {
                 color: #d33;
@@ -126,6 +131,7 @@
             #toggle-ac0:checked ~ #ac0,
             #toggle-vp0:checked ~ #vp0,
             #toggle-x50:checked ~ #x50,
+            #toggle-x5b0:checked ~ #x5b0,
             #toggle-x40:checked ~ #x40,
 
             #toggle-so200:checked ~ #so200,
@@ -134,6 +140,7 @@
             #toggle-ac200:checked ~ #ac200,
             #toggle-vp200:checked ~ #vp200,
             #toggle-x5200:checked ~ #x5200,
+            #toggle-x5b200:checked ~ #x5b200,
             #toggle-x4200:checked ~ #x4200,
 
             #toggle-so226:checked ~ #so226,
@@ -142,6 +149,7 @@
             #toggle-ac226:checked ~ #ac226,
             #toggle-vp226:checked ~ #vp226,
             #toggle-x5226:checked ~ #x5226,
+            #toggle-x5b226:checked ~ #x5b226,
             #toggle-x4226:checked ~ #x4226,
 
             #toggle-so260:checked ~ #so260,
@@ -150,6 +158,7 @@
             #toggle-ac260:checked ~ #ac260,
             #toggle-vp260:checked ~ #vp260,
             #toggle-x5260:checked ~ #x5260,
+            #toggle-x5b260:checked ~ #x5b260,
             #toggle-x4260:checked ~ #x4260,
 
             #toggle-so399:checked ~ #so399,
@@ -158,6 +167,7 @@
             #toggle-ac399:checked ~ #ac399,
             #toggle-vp399:checked ~ #vp399,
             #toggle-x5399:checked ~ #x5399,
+            #toggle-x5b399:checked ~ #x5b399,
             #toggle-x4399:checked ~ #x4399
             {
                 z-index: 1;
@@ -216,6 +226,12 @@
                              Resutling file is 1173632B (561.71 kb/s) - speed 0.62 fps
                          </p>
                          <p>file : <a href="videos/x265_562.mp4">x265_562.mp4</a> (won't play in browser)</p>
+                         <h4 class="new">x265 2018-06</h4>
+                         <p>version 2.8+24-289b8a3730ae
+                             <pre>./x265 --fps 24/1 -p veryslow --bitrate 547 --pass 2 source.y4m -o x265.x265</pre>
+                             Resutling file is 1169594 B (561.42 kb/s) - speed 2.52 fps
+                         </p>
+                         <p>file : <a href="videos/x265_547.mp4">x265_547.mp4</a> (won't play in browser)</p>
                      </div>
                      <div class="box">
                          <h3>x264</h3>
@@ -240,7 +256,8 @@
                          <input type="radio" name="frame0" id="toggle-ab0" />                     <label for="toggle-ab0">AV1 2018-02</label>
                          <input type="radio" name="frame0" id="toggle-ac0" />                     <label for="toggle-ac0">AV1 2018-06</label>
                          <input type="radio" name="frame0" id="toggle-vp0" />                     <label for="toggle-vp0">VP9        </label>
-                         <input type="radio" name="frame0" id="toggle-x50" />                     <label for="toggle-x50">x265       </label>
+                         <input type="radio" name="frame0" id="toggle-x50" />                     <label for="toggle-x50">x265 2016.04       </label>
+                         <input type="radio" name="frame0" id="toggle-x5b0" />                    <label for="toggle-x5b0">x265 2018-06       </label>
                          <input type="radio" name="frame0" id="toggle-x40" />                     <label for="toggle-x40">x264       </label>
 
                          <img id="so0"  src="frames/source_0.png"                alt="source - frame 0">
@@ -248,7 +265,8 @@
                          <img id="ab0"  src="frames/av1_2018-02_512kbps_000.png" alt="av1 2018-02 - frame 0">
                          <img id="ac0"  src="frames/av1_2018-06_512kbps_000.png" alt="av1 2018-06 - frame 0">
                          <img id="vp0"  src="frames/vp9_0.png"                   alt="vp9 - frame 0">
-                         <img id="x50"  src="frames/x265_0.png"                  alt="x265 - frame 0">
+                         <img id="x50"  src="frames/x265_0.png"                  alt="x265 2016.04 - frame 0">
+                         <img id="x5b0" src="frames/x265_2018-06_0.png"          alt="x265 2018-06 - frame 0">
                          <img id="x40"  src="frames/x264_0.png"                  alt="x264 - frame 0">
                      </div>
                      <figcaption>
@@ -265,7 +283,8 @@
                          <input type="radio" name="frame200" id="toggle-ab200" />                   <label for="toggle-ab200">AV1 2018-02</label>
                          <input type="radio" name="frame200" id="toggle-ac200" />                   <label for="toggle-ac200">AV1 2018-06</label>
                          <input type="radio" name="frame200" id="toggle-vp200" />                   <label for="toggle-vp200">VP9   </label>
-                         <input type="radio" name="frame200" id="toggle-x5200" />                   <label for="toggle-x5200">x265  </label>
+                         <input type="radio" name="frame200" id="toggle-x5200" />                   <label for="toggle-x5200">x265 2016.04  </label>
+                         <input type="radio" name="frame200" id="toggle-x5b200" />                  <label for="toggle-x5b200">x265 2018-06  </label>
                          <input type="radio" name="frame200" id="toggle-x4200" />                   <label for="toggle-x4200">x264  </label>
 
                          <img id="so200"  src="frames/source_200.png"              alt="source - frame 200">
@@ -273,7 +292,8 @@
                          <img id="ab200"  src="frames/av1_2018-02_512kbps_200.png" alt="av1 2018-02 - frame 200">
                          <img id="ac200"  src="frames/av1_2018-06_512kbps_200.png" alt="av1 2018-06 - frame 200">
                          <img id="vp200"  src="frames/vp9_200.png"                 alt="vp9 -    frame 200">
-                         <img id="x5200"  src="frames/x265_200.png"                alt="x265 -   frame 200">
+                         <img id="x5200"  src="frames/x265_200.png"                alt="x265 2016.04 -   frame 200">
+                         <img id="x5b200"  src="frames/x265_2018-06_200.png"       alt="x265 2018-06 -   frame 200">
                          <img id="x4200"  src="frames/x264_200.png"                alt="x264 -   frame 200">
                      </div>
                      <figcaption>
@@ -290,7 +310,8 @@
                          <input type="radio" name="frame226" id="toggle-ab226" />                   <label for="toggle-ab226">AV1 2018-02</label>
                          <input type="radio" name="frame226" id="toggle-ac226" />                   <label for="toggle-ac226">AV1 2018-06</label>
                          <input type="radio" name="frame226" id="toggle-vp226" />                   <label for="toggle-vp226">VP9   </label>
-                         <input type="radio" name="frame226" id="toggle-x5226" />                   <label for="toggle-x5226">x265  </label>
+                         <input type="radio" name="frame226" id="toggle-x5226" />                   <label for="toggle-x5226">x265 2016.04  </label>
+                         <input type="radio" name="frame226" id="toggle-x5b226" />                  <label for="toggle-x5b226">x265 2018-06  </label>
                          <input type="radio" name="frame226" id="toggle-x4226" />                   <label for="toggle-x4226">x264  </label>
 
                          <img id="so226"  src="frames/source_226.png"              alt="source - frame 226">
@@ -298,7 +319,8 @@
                          <img id="ab226"  src="frames/av1_2018-02_512kbps_226.png" alt="av1 2018-02 - frame 226">
                          <img id="ac226"  src="frames/av1_2018-06_512kbps_226.png" alt="av1 2018-06 - frame 226">
                          <img id="vp226"  src="frames/vp9_226.png"                 alt="vp9 - frame 226">
-                         <img id="x5226"  src="frames/x265_226.png"                alt="x265 - frame 226">
+                         <img id="x5226"  src="frames/x265_226.png"                alt="x265 2016.04 - frame 226">
+                         <img id="x5b226"  src="frames/x265_2018-06_226.png"       alt="x265 2018-06 - frame 226">
                          <img id="x4226"  src="frames/x264_226.png"                alt="x264 - frame 226">
                      </div>
                      <figcaption>
@@ -315,7 +337,8 @@
                          <input type="radio" name="frame260" id="toggle-ab260" />                   <label for="toggle-ab260">AV1 2018-02</label>
                          <input type="radio" name="frame260" id="toggle-ac260" />                   <label for="toggle-ac260">AV1 2018-06</label>
                          <input type="radio" name="frame260" id="toggle-vp260" />                   <label for="toggle-vp260">VP9   </label>
-                         <input type="radio" name="frame260" id="toggle-x5260" />                   <label for="toggle-x5260">x265  </label>
+                         <input type="radio" name="frame260" id="toggle-x5260" />                   <label for="toggle-x5260">x265 2016.04  </label>
+                         <input type="radio" name="frame260" id="toggle-x5b260" />                  <label for="toggle-x5b260">x265 2018-06  </label>
                          <input type="radio" name="frame260" id="toggle-x4260" />                   <label for="toggle-x4260">x264  </label>
 
                          <img id="so260"  src="frames/source_260.png"              alt="source - frame 260">
@@ -323,7 +346,8 @@
                          <img id="ab260"  src="frames/av1_2018-02_512kbps_260.png" alt="av1 2018-02 - frame 260">
                          <img id="ac260"  src="frames/av1_2018-06_512kbps_260.png" alt="av1 2018-06 - frame 260">
                          <img id="vp260"  src="frames/vp9_260.png"                 alt="vp9 -    frame 260">
-                         <img id="x5260"  src="frames/x265_260.png"                alt="x265 -   frame 260">
+                         <img id="x5260"  src="frames/x265_260.png"                alt="x265 2016.04 -   frame 260">
+                         <img id="x5b260" src="frames/x265_2018-06_260.png"        alt="x265 2018-06 -   frame 260">
                          <img id="x4260"  src="frames/x264_260.png"                alt="x264 -   frame 260">
                      </div>
                      <figcaption>
@@ -340,7 +364,8 @@
                          <input type="radio" name="frame399" id="toggle-ab399" />                   <label for="toggle-ab399">AV1 2018-02</label>
                          <input type="radio" name="frame399" id="toggle-ac399" />                   <label for="toggle-ac399">AV1 2018-06</label>
                          <input type="radio" name="frame399" id="toggle-vp399" />                   <label for="toggle-vp399">VP9   </label>
-                         <input type="radio" name="frame399" id="toggle-x5399" />                   <label for="toggle-x5399">x265  </label>
+                         <input type="radio" name="frame399" id="toggle-x5399" />                   <label for="toggle-x5399">x265 2016.04  </label>
+                         <input type="radio" name="frame399" id="toggle-x5b399" />                  <label for="toggle-x5b399">x265 2018-06  </label>
                          <input type="radio" name="frame399" id="toggle-x4399" />                   <label for="toggle-x4399">x264  </label>
 
                          <img id="so399" src="frames/source_399.png"              alt="source - frame 399">
@@ -348,7 +373,8 @@
                          <img id="ab399" src="frames/av1_2018-02_512kbps_399.png" alt="av1 2018-02 - frame 399">
                          <img id="ac399" src="frames/av1_2018-06_512kbps_399.png" alt="av1 2018-06 - frame 399">
                          <img id="vp399" src="frames/vp9_399.png"                 alt="vp9 -    frame 399">
-                         <img id="x5399" src="frames/x265_399.png"                alt="x265 -   frame 399">
+                         <img id="x5399" src="frames/x265_399.png"                alt="x265 2016.04 -   frame 399">
+                         <img id="x5b399" src="frames/x265_2018-06_399.png"       alt="x265 2018-06 -   frame 399">
                          <img id="x4399" src="frames/x264_399.png"                alt="x264 -   frame 399">
                      </div>
                      <figcaption>
